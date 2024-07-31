@@ -7,12 +7,16 @@ export default function ErrorPage({ error, reset }) {
     <main className="flex min-h-screen flex-col items-center p-2">
       <h1 className="text-6xl text-red-600">Error</h1>
       {/* <p>
-        This page is restricted unless you sign-up or sign in, Please create an
-        account and log in.
+        This action is restricted unless you sign-up or sign in, Please create
+        an account and log in.
       </p> */}
       <p>{error.message}</p>
-
-      <a href="/">Go Back Home</a>
+      <a
+        href="/"
+        className="text-4xl bg-white text-pink-400 outline: border-solid"
+      >
+        Go Back Home
+      </a>
       <button onClick={() => reset()}>Reset</button>
     </main>
   );
