@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { CommentFormButton } from "./CommentFormButton";
+import Tiptap from "@/components/TipTap";
 
 export function CommentForm({ postId, parentCommentId }) {
   const [state, dispatch] = useFormState(saveComment, {
