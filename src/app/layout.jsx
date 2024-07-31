@@ -21,6 +21,13 @@ export default async function RootLayout({ children }) {
             <Link href="/" className="text-xl">
               Didit
             </Link>
+
+            <Link
+              href={"/PostByVotes"}
+              className="ml-10 hover:bg-zinc-300 p-2 rounded bg-pink-300 text-black"
+            >
+              Posts By Vote
+            </Link>
             <Link
               href="/add-post"
               className="ml-10 hover:bg-zinc-300 p-2 rounded bg-pink-300 text-black"

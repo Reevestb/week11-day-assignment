@@ -3,6 +3,7 @@ import { CommentForm } from "@/components/CommentForm";
 import { CommentList } from "@/components/CommentList";
 import { Vote } from "@/components/Vote";
 import { db } from "@/db";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const postId = params.postId;
@@ -39,6 +40,10 @@ export default async function SinglePostPage({ params }) {
     [postId]
   );
   const post = posts[0];
+  const postData = await PostList();
+  if (searchParams.sort === "desc") {
+    postData.reverse();
+  }
 
   const { rows: votes } = await db.query(
     `SELECT *, users.name from votes

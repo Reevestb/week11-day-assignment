@@ -6,6 +6,7 @@ export default function NotFound() {
       <h1>Sorry this has not been found</h1>
 
       <p> why dont you go back to something else</p>
+      <button onClick={() => reset()}>Reset</button>
     </main>
   );
 }
