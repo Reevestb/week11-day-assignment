@@ -46,3 +46,12 @@ The project is a work in progress and is not yet complete.
 - [ ] User following
 - [ ] User feed (posts from users you follow)
 - [ ] User flair
+
+# My Reflection
+
+After Initially looking at the assignment and feeling I have a lot of work to do as I broke down what needed to be done into smaller chunks it alleviated some concerns. I was able to set up the database on supabase and deploy to vercel very easily, making sure my environment variables that I created in the .env.local where also added to vercel to stop anything from breaking in the deployment. From here I was able to start working on some of the stretch goals, I started with the page titles on post pages, I did this by creating a meta data function to be able to access the data from the database using a sql query.
+I then decided to add in the error pages, I also added in a not found page should the user accidentally end up looking for something that isn’t available. I did not struggle with these and found them to be quite an easy task to implement into my app.
+Making it so the user could only vote once was added into the sql for us so i guess as I set up my database correctly this was able to work straight off the get go.
+I tried to implement the TipTap but this is where i struggled a lot! After spending most of the morning and a good portion of the afternoon on this I figured i couldn’t get it to work even after rubber ducking with other cohorts we found that we where all in the same boat with not being able to make it function as we wanted!
+I decided that it was best I moved onto other stretch goals, going into the ReadMe to see what else could be implemented i decided to try and attempt the filter option. Although after some initial struggles with trying to use search params and realising I couldn’t do this is the app is made up of components and not pages I decided a work around with another cohort that we could just make a whole new page that displays the posts in the order of most upvotes as I had set the standard page to order by the most recent instead.
+Overall I had a good experience with this day assignment and given more time would have liked to attempt some more of the stretch goals in the readMe file.
