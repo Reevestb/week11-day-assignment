@@ -4,6 +4,7 @@ import { CommentList } from "@/components/CommentList";
 import { Vote } from "@/components/Vote";
 import { db } from "@/db";
 import Link from "next/link";
+import PostList from "@/components/PostList";
 
 export async function generateMetadata({ params }) {
   const postId = params.postId;
@@ -25,7 +26,7 @@ export async function generateMetadata({ params }) {
     description: `Post content ${post.body}`,
   };
 }
-export default async function SinglePostPage({ params }) {
+export default async function SinglePostPage({ params, searchParams }) {
   const postId = params.postId;
 
   const { rows: posts } = await db.query(
@@ -40,7 +41,7 @@ export default async function SinglePostPage({ params }) {
     [postId]
   );
   const post = posts[0];
-  const postData = await PostList();
+  const postData = await PostList;
   if (searchParams.sort === "desc") {
     postData.reverse();
   }
